@@ -11,7 +11,7 @@ const Skills = () => {
     {
       icon: <Database className="text-blue-600" size={24} />,
       title: 'Data & Analytics',
-      skills: ['Impala', 'Splunk/SPL', 'Trino']
+      skills: ['Impala', 'Splunk/SPL', 'Trino', 'Tableau', 'Pandas']
     },
     {
       icon: <Cloud className="text-blue-600" size={24} />,

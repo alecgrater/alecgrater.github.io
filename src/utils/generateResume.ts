@@ -126,7 +126,7 @@ export const generateResumePDF = () => {
   yPosition += 8;
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
+  const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, Tableau, Pandas, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
   const skillsLines = doc.splitTextToSize(skills, 170);
   doc.text(skillsLines, 20, yPosition);
 

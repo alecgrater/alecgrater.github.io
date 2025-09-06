@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, Download, Mail, Linkedin } from 'lucide-react';
+import { ChevronDown, Download, Mail, Linkedin, Calendar, MapPin } from 'lucide-react';
 import { generateResumePDF } from '../utils/generateResume';
 
 const Hero = () => {
@@ -34,11 +34,17 @@ const Hero = () => {
             
             <div className="grid grid-cols-2 gap-4 mb-8 max-w-2xl">
               <div className="bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-soft hover:shadow-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
-                <h3 className="font-semibold text-slate-800 mb-2">Experience</h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar size={16} className="text-blue-600" />
+                  <h3 className="font-semibold text-slate-800">Experience</h3>
+                </div>
                 <p className="text-slate-600">5+ Years</p>
               </div>
               <div className="bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-soft hover:shadow-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
-                <h3 className="font-semibold text-slate-800 mb-2">Location</h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <MapPin size={16} className="text-blue-600" />
+                  <h3 className="font-semibold text-slate-800">Location</h3>
+                </div>
                 <p className="text-slate-600">San Francisco, CA</p>
               </div>
               <div className="bg-white/70 backdrop-blur-sm p-4 rounded-lg shadow-soft hover:shadow-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer">

@@ -33,7 +33,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {['Experience', 'Skills'].map((item) => (
+            {['Experience', 'Skills', 'Education'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -57,7 +57,7 @@ const Header = () => {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
             <nav className="flex flex-col space-y-1 p-4">
-              {['Experience', 'Skills'].map((item) => (
+              {['Experience', 'Skills', 'Education'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

@@ -129,6 +129,33 @@ export const generateResumePDF = () => {
   const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, Tableau, Pandas, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
   const skillsLines = doc.splitTextToSize(skills, 170);
   doc.text(skillsLines, 20, yPosition);
+  yPosition += skillsLines.length * 4;
+
+  // Education Section
+  yPosition += 12;
+  doc.setFontSize(12);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Education', 20, yPosition);
+
+  yPosition += 8;
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Bachelor of Economics - University of Massachusetts Amherst', 20, yPosition);
+  
+  yPosition += 5;
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.text('2016', 20, yPosition);
+
+  yPosition += 6;
+  doc.setFontSize(9);
+  doc.text('• Minor: Information Technology', 25, yPosition);
+  
+  yPosition += 4;
+  doc.text('• Performer and Technical Leader (website design/maintenance), UMass Comedy League', 25, yPosition);
+  
+  yPosition += 4;
+  doc.text('• Lieutenant Governor, Student Government', 25, yPosition);
 
   // Save the PDF
   doc.save('Alec_Grater_Resume.pdf');

@@ -56,105 +56,105 @@ const experiences: Experience[] = [
 
 export const generateResumePDF = () => {
   const doc = new jsPDF();
-  let yPosition = 20;
+  let yPosition = 18;
 
   // Header
-  doc.setFontSize(22);
+  doc.setFontSize(20);
   doc.setFont('helvetica', 'bold');
   doc.text('Alec Grater', 20, yPosition);
   
-  yPosition += 10;
-  doc.setFontSize(14);
+  yPosition += 8;
+  doc.setFontSize(13);
   doc.setFont('helvetica', 'normal');
   doc.text('Software Engineer & Problem Solver', 20, yPosition);
 
   // Contact Information - Single line
-  yPosition += 12;
-  doc.setFontSize(10);
+  yPosition += 10;
+  doc.setFontSize(9);
   doc.text('Email: AlecGrater@gmail.com | LinkedIn: linkedin.com/in/alecgrater | Location: San Francisco, CA', 20, yPosition);
 
   // Professional Summary
-  yPosition += 15;
-  doc.setFontSize(12);
+  yPosition += 12;
+  doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.text('Professional Summary', 20, yPosition);
   
-  yPosition += 8;
-  doc.setFontSize(10);
+  yPosition += 6;
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
   const summary = 'Enthusiastic and results-driven Software Engineer with a proven track record of building large-scale systems, automating workflows, and reducing operational costs. Skilled at leveraging data, automation, and AI/LLM technologies to improve processes and deliver measurable business impact.';
   const summaryLines = doc.splitTextToSize(summary, 170);
   doc.text(summaryLines, 20, yPosition);
-  yPosition += summaryLines.length * 5;
+  yPosition += summaryLines.length * 4;
 
   // Work Experience
-  yPosition += 12;
-  doc.setFontSize(12);
+  yPosition += 10;
+  doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.text('Work Experience', 20, yPosition);
 
-  // Include all experiences with better spacing
+  // Include all experiences with tighter spacing
   experiences.forEach((exp, index) => {
-    yPosition += 10;
+    yPosition += 8;
 
     // Company and Role
-    doc.setFontSize(11);
+    doc.setFontSize(10);
     doc.setFont('helvetica', 'bold');
     doc.text(`${exp.role} - ${exp.company}`, 20, yPosition);
     
-    yPosition += 6;
-    doc.setFontSize(9);
+    yPosition += 4;
+    doc.setFontSize(8);
     doc.setFont('helvetica', 'normal');
     doc.text(`${exp.period} | ${exp.location}`, 20, yPosition);
 
-    // Include all achievements with better spacing
+    // Include all achievements with tighter spacing
     exp.achievements.forEach((achievement) => {
-      yPosition += 6;
+      yPosition += 4;
       
       const achievementLines = doc.splitTextToSize(`• ${achievement}`, 170);
       doc.text(achievementLines, 25, yPosition);
-      yPosition += (achievementLines.length - 1) * 4;
+      yPosition += (achievementLines.length - 1) * 3;
     });
   });
 
   // Skills Section (after Work Experience)
-  yPosition += 12;
-  doc.setFontSize(12);
-  doc.setFont('helvetica', 'bold');
-  doc.text('Technical Skills', 20, yPosition);
-  
-  yPosition += 8;
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, Tableau, Pandas, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
-  const skillsLines = doc.splitTextToSize(skills, 170);
-  doc.text(skillsLines, 20, yPosition);
-  yPosition += skillsLines.length * 4;
-
-  // Education Section
-  yPosition += 12;
-  doc.setFontSize(12);
-  doc.setFont('helvetica', 'bold');
-  doc.text('Education', 20, yPosition);
-
   yPosition += 8;
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
-  doc.text('Bachelor of Economics - University of Massachusetts Amherst', 20, yPosition);
+  doc.text('Technical Skills', 20, yPosition);
   
   yPosition += 5;
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
+  const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, Tableau, Pandas, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
+  const skillsLines = doc.splitTextToSize(skills, 170);
+  doc.text(skillsLines, 20, yPosition);
+  yPosition += skillsLines.length * 3;
+
+  // Education Section
+  yPosition += 8;
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Education', 20, yPosition);
+
+  yPosition += 5;
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.text('Bachelor of Economics - University of Massachusetts Amherst', 20, yPosition);
+  
+  yPosition += 4;
+  doc.setFontSize(8);
+  doc.setFont('helvetica', 'normal');
   doc.text('2016', 20, yPosition);
 
-  yPosition += 6;
-  doc.setFontSize(9);
+  yPosition += 4;
+  doc.setFontSize(8);
   doc.text('• Minor: Information Technology', 25, yPosition);
   
-  yPosition += 4;
+  yPosition += 3;
   doc.text('• Performer and Technical Leader (website design/maintenance), UMass Comedy League', 25, yPosition);
   
-  yPosition += 4;
+  yPosition += 3;
   doc.text('• Lieutenant Governor, Student Government', 25, yPosition);
 
   // Save the PDF

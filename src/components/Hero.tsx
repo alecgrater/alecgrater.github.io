@@ -94,8 +94,8 @@ const Hero = () => {
 
           {/* Right side - Profile image */}
           <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center shadow-xl animate-float">
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-inner">
+            <div className="w-[538px] h-[538px] bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center shadow-xl animate-float">
+              <div className="w-[450px] h-[450px] rounded-full overflow-hidden shadow-inner">
                 <img
                   src="/professional-headshot.jpg"
                   alt="Alec Grater - Professional Headshot"

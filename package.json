@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://alecgrater.github.io/portfolio",
+  "homepage": "https://alecgrater.github.io",
   "dependencies": {
     "jspdf": "^3.0.2",
     "lucide-react": "^0.344.0",

@@ -5,23 +5,23 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: <Code className="text-blue-600" size={24} />,
-      title: 'Programming & Development',
-      skills: ['Python', 'SQL', 'ETL', 'LLMs', 'RAG Systems']
+      title: 'Programming & Data',
+      skills: ['Python', 'Pandas', 'SQL']
     },
     {
       icon: <Database className="text-blue-600" size={24} />,
-      title: 'Data & Analytics',
-      skills: ['Impala', 'Splunk/SPL', 'Trino', 'Tableau', 'Pandas']
+      title: 'Big Data & Analytics',
+      skills: ['Splunk/SPL', 'Impala', 'Trino']
     },
     {
       icon: <Cloud className="text-blue-600" size={24} />,
-      title: 'Infrastructure & DevOps',
-      skills: ['CI/CD Orchestration Systems', 'Kubernetes']
+      title: 'DevOps & Infrastructure',
+      skills: ['CI/CD orchestration', 'Kubernetes', 'Docker']
     },
     {
       icon: <Users className="text-blue-600" size={24} />,
-      title: 'Leadership & Collaboration',
-      skills: ['Customer & Personal Service', 'Mentorship', 'Cross-Team Collaboration']
+      title: 'Collaboration & Leadership',
+      skills: ['Cross-team collaboration', 'Influencing stakeholders', 'Customer-focused problem solving']
     }
   ];
 
@@ -31,7 +31,7 @@ const Skills = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-              Technical Skills
+              Skills & Abilities
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>

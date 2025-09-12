@@ -16,7 +16,7 @@ const Education = () => {
           <div className="bg-slate-50 rounded-lg p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-2">Bachelor of Economics</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-2">Bachelor of Economics, Minor in Information Technology</h3>
                 <h4 className="text-lg text-blue-600 font-semibold">University of Massachusetts Amherst</h4>
               </div>
               <div className="flex items-center gap-2 text-slate-600 mt-2 md:mt-0">
@@ -29,21 +29,14 @@ const Education = () => {
               <div className="flex items-start gap-3">
                 <Award size={16} className="text-blue-600 mt-1 flex-shrink-0" />
                 <p className="text-slate-700 leading-relaxed">
-                  <strong>Minor:</strong> Information Technology
+                  Led digital initiatives as Technical Lead, UMass Comedy League (website design & maintenance)
                 </p>
               </div>
               
               <div className="flex items-start gap-3">
                 <Award size={16} className="text-blue-600 mt-1 flex-shrink-0" />
                 <p className="text-slate-700 leading-relaxed">
-                  Performer and Technical Leader (website design/maintenance), UMass Comedy League
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Award size={16} className="text-blue-600 mt-1 flex-shrink-0" />
-                <p className="text-slate-700 leading-relaxed">
-                  Lieutenant Governor, Student Government
+                  Elected Lieutenant Governor, Student Government – managed cross-campus projects and initiatives
                 </p>
               </div>
             </div>

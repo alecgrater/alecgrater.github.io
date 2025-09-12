@@ -15,9 +15,9 @@ const experiences: Experience[] = [
     period: 'Jan 2020 – Present',
     location: 'Cupertino, CA',
     achievements: [
-      'Led cross-functional initiative with 20+ teams to cut telemetry ingestion from 10PB to 5PB/week, saving an estimated $25M annually in storage and compute costs',
-      'Built CI/CD automation delivering daily OTA configuration updates to 700M+ devices, ensuring consistent telemetry during rapid release cycles',
-      'Developed an LLM-powered RAG Helpdesk bot for documentation retrieval, reducing engineering process time by 75%'
+      'Spearheaded a cross-functional initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting storage and compute costs by ~$25M annually.',
+      'Architect and maintain CI/CD pipelines delivering daily over-the-air configuration updates to 2B+ devices worldwide.',
+      'Designed and deployed an LLM-powered RAG bot for documentation retrieval, halving helpdesk ticket processing time and improving operational efficiency.'
     ]
   },
   {
@@ -26,9 +26,9 @@ const experiences: Experience[] = [
     period: 'Nov 2018 – Jan 2020',
     location: 'Boston, MA',
     achievements: [
-      'Troubleshot hardware and software issues across iPhone, iPad, Apple Watch, and Apple TV with a 95%+ NPS',
-      'Performed complex repairs on iPhone components including displays, batteries, cameras, and taptic engines',
-      'Mentored and onboarded new employees, accelerating ramp-up and improving team performance'
+      'Delivered technical support and training on iOS, macOS, and Apple ecosystem devices, resolving 60+ customer issues per week with a 95%+ satisfaction rating.',
+      'Translated complex technical concepts into clear, actionable solutions to improve customer confidence and satisfaction.',
+      'Collaborated with retail and service teams to streamline customer experiences and support new product launches.'
     ]
   },
   {
@@ -37,19 +37,19 @@ const experiences: Experience[] = [
     period: 'Jan 2017 – Jan 2018',
     location: 'Boston, MA',
     achievements: [
-      'Supervised 40+ employees, managing scheduling, training, and daily operations',
-      'Analyzed sales metrics to optimize staffing and drive revenue growth',
-      'Recruited, hired, and developed new staff to improve customer service and team cohesion'
+      'Directed daily operations and cross-functional coordination to drive efficiency, compliance, and business results.',
+      'Supervised, coached, and developed a team of 40+ associates, improving performance and building future leaders.',
+      'Analyzed KPIs and operational metrics to inform strategic decisions, optimize resources, and reduce inefficiencies.'
     ]
   },
   {
     company: 'YouTube',
     role: 'Content Creator',
-    period: 'Apr 2008 – 2014',
+    period: 'Apr 2008 – 2012',
     location: 'Remote',
     achievements: [
-      'Produced and monetized technology and gaming tutorial videos, growing channel to 3M views and 2,700 subscribers',
-      'Built and engaged an audience through consistent, high-quality content'
+      'Built and grew a digital audience through engaging instructional videos on technology and gaming, achieving 3M+ views and 2.7K subscribers.',
+      'Leveraged content strategy, audience analytics, and monetization techniques to maximize reach and revenue potential.'
     ]
   }
 ];
@@ -121,15 +121,39 @@ export const generateResumePDF = () => {
   yPosition += 8;
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
-  doc.text('Technical Skills', 20, yPosition);
+  doc.text('Skills & Abilities', 20, yPosition);
   
   yPosition += 5;
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  const skills = 'Python, SQL, ETL, Impala, Splunk/SPL, Trino, Tableau, Pandas, CI/CD Orchestration Systems, LLMs, RAG Systems, Kubernetes, Customer & Personal Service, Mentorship, Cross-Team Collaboration';
-  const skillsLines = doc.splitTextToSize(skills, 170);
-  doc.text(skillsLines, 20, yPosition);
-  yPosition += skillsLines.length * 3;
+  
+  // Programming & Data
+  doc.setFont('helvetica', 'bold');
+  doc.text('• Programming & Data:', 20, yPosition);
+  yPosition += 3;
+  doc.setFont('helvetica', 'normal');
+  doc.text('  Python, Pandas, SQL', 20, yPosition);
+  
+  yPosition += 4;
+  doc.setFont('helvetica', 'bold');
+  doc.text('• Big Data & Analytics:', 20, yPosition);
+  yPosition += 3;
+  doc.setFont('helvetica', 'normal');
+  doc.text('  Splunk/SPL, Impala, Trino', 20, yPosition);
+  
+  yPosition += 4;
+  doc.setFont('helvetica', 'bold');
+  doc.text('• DevOps & Infrastructure:', 20, yPosition);
+  yPosition += 3;
+  doc.setFont('helvetica', 'normal');
+  doc.text('  CI/CD orchestration, Kubernetes, Docker', 20, yPosition);
+  
+  yPosition += 4;
+  doc.setFont('helvetica', 'bold');
+  doc.text('• Collaboration & Leadership:', 20, yPosition);
+  yPosition += 3;
+  doc.setFont('helvetica', 'normal');
+  doc.text('  Cross-team collaboration, Influencing stakeholders, Customer-focused problem solving', 20, yPosition);
 
   // Education Section
   yPosition += 8;
@@ -140,7 +164,7 @@ export const generateResumePDF = () => {
   yPosition += 5;
   doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
-  doc.text('Bachelor of Economics - University of Massachusetts Amherst', 20, yPosition);
+  doc.text('Bachelor of Economics, Minor in Information Technology - University of Massachusetts Amherst', 20, yPosition);
   
   yPosition += 4;
   doc.setFontSize(8);
@@ -149,13 +173,10 @@ export const generateResumePDF = () => {
 
   yPosition += 4;
   doc.setFontSize(8);
-  doc.text('• Minor: Information Technology', 25, yPosition);
+  doc.text('• Led digital initiatives as Technical Lead, UMass Comedy League (website design & maintenance)', 25, yPosition);
   
   yPosition += 3;
-  doc.text('• Performer and Technical Leader (website design/maintenance), UMass Comedy League', 25, yPosition);
-  
-  yPosition += 3;
-  doc.text('• Lieutenant Governor, Student Government', 25, yPosition);
+  doc.text('• Elected Lieutenant Governor, Student Government – managed cross-campus projects and initiatives', 25, yPosition);
 
   // Save the PDF
   doc.save('Alec_Grater_Resume.pdf');

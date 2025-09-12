@@ -9,9 +9,9 @@ const Experience = () => {
       period: 'Jan 2020 – Present',
       location: 'Cupertino, CA',
       achievements: [
-        'Led cross-functional initiative with 20+ teams to cut telemetry ingestion from 10PB to 5PB/week, saving an estimated $25M annually in storage and compute costs',
-        'Built CI/CD automation delivering daily OTA configuration updates to 700M+ devices, ensuring consistent telemetry during rapid release cycles',
-        'Developed an LLM-powered RAG Helpdesk bot for documentation retrieval, reducing engineering process time by 75%'
+        'Spearheaded a cross-functional initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting storage and compute costs by ~$25M annually.',
+        'Architect and maintain CI/CD pipelines delivering daily over-the-air configuration updates to 2B+ devices worldwide.',
+        'Designed and deployed an LLM-powered RAG bot for documentation retrieval, halving helpdesk ticket processing time and improving operational efficiency.'
       ]
     },
     {
@@ -20,9 +20,9 @@ const Experience = () => {
       period: 'Nov 2018 – Jan 2020',
       location: 'Boston, MA',
       achievements: [
-        'Troubleshot hardware and software issues across iPhone, iPad, Apple Watch, and Apple TV with a 95%+ NPS',
-        'Performed complex repairs on iPhone components including displays, batteries, cameras, and taptic engines',
-        'Mentored and onboarded new employees, accelerating ramp-up and improving team performance'
+        'Delivered technical support and training on iOS, macOS, and Apple ecosystem devices, resolving 60+ customer issues per week with a 95%+ satisfaction rating.',
+        'Translated complex technical concepts into clear, actionable solutions to improve customer confidence and satisfaction.',
+        'Collaborated with retail and service teams to streamline customer experiences and support new product launches.'
       ]
     },
     {
@@ -31,19 +31,19 @@ const Experience = () => {
       period: 'Jan 2017 – Jan 2018',
       location: 'Boston, MA',
       achievements: [
-        'Supervised 40+ employees, managing scheduling, training, and daily operations',
-        'Analyzed sales metrics to optimize staffing and drive revenue growth',
-        'Recruited, hired, and developed new staff to improve customer service and team cohesion'
+        'Directed daily operations and cross-functional coordination to drive efficiency, compliance, and business results.',
+        'Supervised, coached, and developed a team of 40+ associates, improving performance and building future leaders.',
+        'Analyzed KPIs and operational metrics to inform strategic decisions, optimize resources, and reduce inefficiencies.'
       ]
     },
     {
       company: 'YouTube',
       role: 'Content Creator',
-      period: 'Apr 2008 – 2014',
+      period: 'Apr 2008 – 2012',
       location: 'Remote',
       achievements: [
-        'Produced and monetized technology and gaming tutorial videos, growing channel to 3M views and 2,700 subscribers',
-        'Built and engaged an audience through consistent, high-quality content'
+        'Built and grew a digital audience through engaging instructional videos on technology and gaming, achieving 3M+ views and 2.7K subscribers.',
+        'Leveraged content strategy, audience analytics, and monetization techniques to maximize reach and revenue potential.'
       ]
     }
   ];

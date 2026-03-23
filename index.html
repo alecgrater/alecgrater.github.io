@@ -88,12 +88,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: background 0.4s, -webkit-backdrop-filter 0.4s;
       transition: background 0.4s, backdrop-filter 0.4s;
+      transition: background 0.4s, backdrop-filter 0.4s, -webkit-backdrop-filter 0.4s;
     }
 
     .nav.scrolled {
       background: rgba(10, 10, 10, 0.85);
-      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+              backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -336,7 +339,8 @@
     .hero__photo-frame img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       filter: grayscale(20%) contrast(1.05);
       transition: filter 0.6s;
     }
@@ -385,6 +389,7 @@
 
     .marquee__inner {
       display: flex;
+      width: -moz-max-content;
       width: max-content;
       animation: marqueeScroll 30s linear infinite;
     }
@@ -823,7 +828,7 @@
       </div>
       <div class="hero__photo reveal reveal-delay-2">
         <div class="hero__photo-frame">
-          <img src="public/professional-headshot.jpg" alt="Alec Grater" />
+          <img src="/assets/professional-headshot-fW9SBI08.jpg" alt="Alec Grater" />
         </div>
       </div>
     </div>

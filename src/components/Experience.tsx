@@ -9,9 +9,10 @@ const Experience = () => {
       period: 'Jan 2020 – Present',
       location: 'Cupertino, CA',
       achievements: [
-        'Spearheaded a cross-functional initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting storage and compute costs by ~$25M annually.',
-        'Architect and maintain CI/CD pipelines delivering daily over-the-air configuration updates to 2B+ devices worldwide.',
-        'Designed and deployed an LLM-powered RAG bot for documentation retrieval, halving helpdesk ticket processing time and improving operational efficiency.'
+        'Continuously adopted cutting-edge AI tools and built internal tooling — including a RAG system across docs and Slack, custom MCPs for databases and internal tools, and Claude Code plugins — to accelerate team productivity.',
+        'Led a cross-functional data optimization initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting $25M in annual costs.',
+        'Maintained CI/CD pipelines powering configuration updates to 1B+ devices daily.',
+        'Onboarded and supported teams in designing high-impact telemetry that balanced performance and privacy constraints.'
       ]
     },
     {

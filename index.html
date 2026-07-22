@@ -21,10 +21,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alec Grater — Software Engineer</title>
-  <meta name="description" content="Alec Grater — Software Engineer at Apple. Building large-scale systems, automating workflows, and shipping AI-powered tools to 2B+ devices." />
-  <meta property="og:title" content="Alec Grater — Software Engineer" />
-  <meta property="og:description" content="Building large-scale systems and delivering measurable business impact at Apple Inc." />
+  <title>Alec Grater — AI/ML Software Engineer</title>
+  <meta name="description" content="Alec Grater — AI/ML Software Engineer at Apple. Building agentic AI systems and petabyte-scale data infrastructure, shipping production AI tools and delivering multi-million dollar cost savings." />
+  <meta property="og:title" content="Alec Grater — AI/ML Software Engineer" />
+  <meta property="og:description" content="Building agentic AI systems and petabyte-scale data infrastructure at Apple Inc." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -658,6 +658,84 @@
       top: 0.3em;
     }
 
+    /* ── Projects ─────────────────────────────────────── */
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .project-card__number {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--border);
+      line-height: 1;
+      pointer-events: none;
+      transition: color 0.3s;
+    }
+
+    .project-card:hover .project-card__number {
+      color: rgba(212, 165, 116, 0.15);
+    }
+
+    .project-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .project-card__title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .project-card__meta {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+    }
+
+    .project-card__desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .project-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .project-card__tags .skill-card__tag { background: var(--bg); }
+
+    .project-card:hover .skill-card__tag {
+      border-color: var(--accent-dim);
+      color: var(--text);
+    }
+
     /* ── Contact ──────────────────────────────────────── */
     .contact-grid {
       display: grid;
@@ -789,6 +867,7 @@
     <ul class="nav__links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -802,6 +881,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
@@ -811,15 +891,16 @@
   <section class="hero">
     <div class="hero__grid">
       <div>
-        <p class="hero__overline reveal">Software Engineer &bull; San Francisco</p>
+        <p class="hero__overline reveal">AI/ML Software Engineer &bull; San Francisco</p>
         <h1 class="hero__name reveal reveal-delay-1">
           Alec
           <span>Grater</span>
         </h1>
         <p class="hero__bio reveal reveal-delay-2">
-          Results-driven engineer with 5+ years building large-scale systems, automating
-          workflows, and shipping AI-powered tools. Currently delivering configuration
-          updates to 2 billion devices daily at Apple.
+          AI/ML software engineer with 6+ years building agentic systems and
+          petabyte-scale data infrastructure at Apple. Shipping production AI tools
+          and leading cross-functional initiatives that cut multi-million dollar
+          operating costs &mdash; while delivering configuration updates to 1B+ devices daily.
         </p>
         <div class="hero__actions reveal reveal-delay-3">
           <a href="#experience" class="btn btn--primary">View Experience</a>
@@ -845,6 +926,9 @@
       <span class="marquee__item">Kubernetes</span>
       <span class="marquee__item">CI/CD Pipelines</span>
       <span class="marquee__item">LLM & RAG Systems</span>
+      <span class="marquee__item">Agentic AI</span>
+      <span class="marquee__item">MCP</span>
+      <span class="marquee__item">Claude Code</span>
       <span class="marquee__item">SQL</span>
       <span class="marquee__item">Docker</span>
       <span class="marquee__item">Splunk/SPL</span>
@@ -858,6 +942,9 @@
       <span class="marquee__item">Kubernetes</span>
       <span class="marquee__item">CI/CD Pipelines</span>
       <span class="marquee__item">LLM & RAG Systems</span>
+      <span class="marquee__item">Agentic AI</span>
+      <span class="marquee__item">MCP</span>
+      <span class="marquee__item">Claude Code</span>
       <span class="marquee__item">SQL</span>
       <span class="marquee__item">Docker</span>
       <span class="marquee__item">Splunk/SPL</span>
@@ -889,7 +976,7 @@
           <div class="stat__label">Annual cost savings delivered</div>
         </div>
         <div class="stat reveal reveal-delay-3">
-          <div class="stat__number">2B+</div>
+          <div class="stat__number">1B+</div>
           <div class="stat__label">Devices updated daily</div>
         </div>
         <div class="stat reveal reveal-delay-4">
@@ -919,9 +1006,9 @@
             </div>
           </div>
           <ul class="timeline__achievements">
-            <li>Continuously adopted cutting-edge AI tools and built internal tooling, including a RAG system across docs and Slack, custom MCPs for databases and internal tools, and Claude Code plugins to accelerate team productivity.</li>
-            <li>Led a cross-functional data optimization initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting $25M in annual costs.</li>
-            <li>Maintained CI/CD pipelines powering configuration updates to 1B+ devices daily.</li>
+            <li>Built an AI chat assistant unifying 18 internal data sources (Slack, Confluence, GitHub, Jira, Jenkins, and analytics databases) behind the Claude API with RAG-based semantic search, saving each user an estimated 5+ hours per week.</li>
+            <li>Led a cross-functional data optimization initiative across 20+ teams, reducing telemetry ingestion from 10PB to 5PB/week and cutting $25M in annual costs — including an automated rolling-window feature to age out stale telemetry.</li>
+            <li>Own the build-out and operation of CI/CD pipelines delivering configuration updates to 1B+ devices daily.</li>
             <li>Onboarded and supported teams in designing high-impact telemetry that balanced performance and privacy constraints.</li>
           </ul>
         </div>
@@ -982,47 +1069,90 @@
     </div>
   </section>
 
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">03 &mdash; Projects</div>
+      <h2 class="section-title reveal reveal-delay-1">Things I've<br />built.</h2>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-card__number">01</div>
+        <div class="project-card__header">
+          <div class="project-card__title">AI YouTube Content Studio</div>
+          <div class="project-card__meta">Electron Desktop App</div>
+        </div>
+        <p class="project-card__desc">
+          An AI-powered desktop application for automated faceless YouTube content creation,
+          featuring a full production pipeline &mdash; script generation, visual synthesis, voice
+          synthesis, and video rendering. Built with a Python/FastAPI backend, a React/TypeScript
+          frontend, Remotion for programmatic video rendering, and SQLite for persistence.
+        </p>
+        <div class="project-card__tags">
+          <span class="skill-card__tag">Python</span>
+          <span class="skill-card__tag">FastAPI</span>
+          <span class="skill-card__tag">React</span>
+          <span class="skill-card__tag">TypeScript</span>
+          <span class="skill-card__tag">Electron</span>
+          <span class="skill-card__tag">Remotion</span>
+          <span class="skill-card__tag">SQLite</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Skills -->
   <section class="section section--alt" id="skills">
     <div class="container">
-      <div class="section-label reveal">03 &mdash; Skills</div>
+      <div class="section-label reveal">04 &mdash; Skills</div>
       <h2 class="section-title reveal reveal-delay-1">Tools of<br />the trade.</h2>
 
       <div class="skills-grid">
         <div class="skill-card reveal">
           <div class="skill-card__number">01</div>
-          <div class="skill-card__title">Programming & Data</div>
+          <div class="skill-card__title">AI/ML & Agentic Systems</div>
           <div class="skill-card__tags">
-            <span class="skill-card__tag">Python</span>
-            <span class="skill-card__tag">Pandas</span>
-            <span class="skill-card__tag">SQL</span>
+            <span class="skill-card__tag">Agentic AI</span>
+            <span class="skill-card__tag">RAG</span>
+            <span class="skill-card__tag">MCP</span>
+            <span class="skill-card__tag">Claude Code</span>
+            <span class="skill-card__tag">LangChain</span>
+            <span class="skill-card__tag">Prompt Engineering</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-1">
           <div class="skill-card__number">02</div>
-          <div class="skill-card__title">Big Data & Analytics</div>
+          <div class="skill-card__title">Programming & Data</div>
           <div class="skill-card__tags">
-            <span class="skill-card__tag">Splunk / SPL</span>
-            <span class="skill-card__tag">Impala</span>
-            <span class="skill-card__tag">Trino</span>
+            <span class="skill-card__tag">Python</span>
+            <span class="skill-card__tag">Pandas</span>
+            <span class="skill-card__tag">NumPy</span>
+            <span class="skill-card__tag">SQL</span>
+            <span class="skill-card__tag">Matplotlib</span>
+            <span class="skill-card__tag">Seaborn</span>
+            <span class="skill-card__tag">Plotly</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-2">
           <div class="skill-card__number">03</div>
-          <div class="skill-card__title">DevOps & Infrastructure</div>
+          <div class="skill-card__title">Big Data & Analytics</div>
           <div class="skill-card__tags">
-            <span class="skill-card__tag">CI/CD Orchestration</span>
-            <span class="skill-card__tag">Kubernetes</span>
-            <span class="skill-card__tag">Docker</span>
+            <span class="skill-card__tag">Trino</span>
+            <span class="skill-card__tag">Impala</span>
+            <span class="skill-card__tag">Splunk / SPL</span>
+            <span class="skill-card__tag">Airflow</span>
+            <span class="skill-card__tag">Tableau</span>
+            <span class="skill-card__tag">Superset</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-3">
           <div class="skill-card__number">04</div>
-          <div class="skill-card__title">Collaboration & Leadership</div>
+          <div class="skill-card__title">DevOps & Infrastructure</div>
           <div class="skill-card__tags">
-            <span class="skill-card__tag">Cross-team Collaboration</span>
-            <span class="skill-card__tag">Stakeholder Influence</span>
-            <span class="skill-card__tag">Customer-focused</span>
+            <span class="skill-card__tag">Jenkins</span>
+            <span class="skill-card__tag">GitHub Actions</span>
+            <span class="skill-card__tag">Docker</span>
+            <span class="skill-card__tag">Kubernetes</span>
+            <span class="skill-card__tag">AWS</span>
           </div>
         </div>
       </div>
@@ -1032,7 +1162,7 @@
   <!-- Education -->
   <section class="section" id="education">
     <div class="container">
-      <div class="section-label reveal">04 &mdash; Education</div>
+      <div class="section-label reveal">05 &mdash; Education</div>
       <h2 class="section-title reveal reveal-delay-1">Foundation.</h2>
 
       <div class="edu-card reveal reveal-delay-2">
@@ -1052,7 +1182,7 @@
   <!-- Contact -->
   <section class="section section--alt" id="contact">
     <div class="container">
-      <div class="section-label reveal">05 &mdash; Contact</div>
+      <div class="section-label reveal">06 &mdash; Contact</div>
       <h2 class="section-title reveal reveal-delay-1">Let's connect.</h2>
       <p class="reveal reveal-delay-2" style="color: var(--text-muted); font-size: 1.05rem; max-width: 550px; line-height: 1.7; margin-bottom: 3rem;">
         I'm always interested in discussing new opportunities, collaborations,
